@@ -2,14 +2,16 @@ package com.tech.hreurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableEurekaServer
+@EnableEurekaClient
+@EnableFeignClients
 @SpringBootApplication
-public class HrEurekaServerApplication {
+public class HrPayrollApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(HrEurekaServerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(HrPayrollApplication.class, args);
+    }
 
 }
